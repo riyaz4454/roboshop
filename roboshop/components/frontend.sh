@@ -1,10 +1,6 @@
 #!/bin/bash
 
-source components/common.sh
-
 DOMAIN="3.84.54.0"
-
-OS_PREREQ
 
 Head "Installing Nginx"
 apt install nginx -y &>>$LOG
