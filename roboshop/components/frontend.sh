@@ -2,7 +2,7 @@
 
 source components/common.sh
 
-DOMAIN="zsdevops01.online"
+DOMAIN=rsdevops01.tk""
 
 OS_PREREQ
 
@@ -23,7 +23,7 @@ Stat $?
 Head "Update Nginx Configuration"
 mv roboshop.conf /etc/nginx/sites-enabled/roboshop.conf
 for comp in catalogue cart user shipping payment ; do
-  sed -i -e "/$comp/ s/localhost/${comp}.zsdevops01.online/" /etc/nginx/sites-enabled/roboshop.conf
+  sed -i -e "/$comp/ s/localhost/${comp}.rsdevops01.tk/" /etc/nginx/sites-enabled/roboshop.conf
 done
 Stat $?
 
