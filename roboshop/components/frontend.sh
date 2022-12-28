@@ -20,3 +20,6 @@ Head "Unzip Downloaded Archive"
 cd /var/www && unzip -o /tmp/frontend.zip &>>$LOG && mv frontend-main/* . && mv static html && rm -rf frontend-main README.md
 Stat $?
 
+Head "Restart Nginx Service"
+systemctl restart nginx
+Stat $?
