@@ -1,6 +1,10 @@
 #!/bin/bash
 
-DOMAIN="3.84.54.0"
+source components/common.sh
+
+DOMAIN="zsdevops01.online"
+
+OS_PREREQ
 
 Head "Installing Nginx"
 apt install nginx -y &>>$LOG
@@ -19,7 +23,7 @@ Stat $?
 Head "Update Nginx Configuration"
 mv roboshop.conf /etc/nginx/sites-enabled/roboshop.conf
 for comp in catalogue cart user shipping payment ; do
-  sed -i -e "/$comp/ s/localhost/${comp}.3.84.54.0/" /etc/nginx/sites-enabled/roboshop.conf
+  sed -i -e "/$comp/ s/localhost/${comp}.zsdevops01.online/" /etc/nginx/sites-enabled/roboshop.conf
 done
 Stat $?
 
