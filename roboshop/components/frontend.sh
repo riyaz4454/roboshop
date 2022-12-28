@@ -23,7 +23,7 @@ Stat $?
 Head "Update Nginx Configuration"
 mv roboshop.conf /etc/nginx/sites-enabled/roboshop.conf
 for comp in catalogue cart user shipping payment ; do
-  sed -i -e "/$comp/ s/localhost/${comp}.rsdevops01.tk/" /etc/nginx/sites-enabled/roboshop.conf
+  sed -i -e "/$comp/ s/localhost/${comp}.3.84.54.0/" /etc/nginx/sites-enabled/roboshop.conf
 done
 Stat $?
 
