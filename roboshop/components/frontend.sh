@@ -2,7 +2,7 @@
 
 source components/common.sh
 
-DOMAIN="52.90.40.226"
+DOMAIN="rsdevops01.tk"
 
 OS_PREREQ
 
